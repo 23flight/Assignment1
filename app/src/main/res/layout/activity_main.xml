@@ -7,13 +7,94 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- First row of images (top) -->
+
+
+    <!-- Center Text -->
+
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="76dp"
+        android:contentDescription="Image 1"
+        android:src="@drawable/jupiter"
+        app:layout_constraintEnd_toStartOf="@id/image2"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/image4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="272dp"
+        android:contentDescription="Image 1"
+        android:src="@drawable/venus"
+        app:layout_constraintEnd_toStartOf="@id/image2"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Message Text -->
+    <ImageView
+        android:id="@+id/image2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="76dp"
+        android:contentDescription="Image 2"
+        android:src="@drawable/neptune"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@id/image1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/image3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="272dp"
+        android:contentDescription="Image 3"
+        android:src="@drawable/saturn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@id/image1"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
+        android:id="@+id/centerText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="Click to discover one of the planets!"
+        android:textAlignment="center"
+        android:textSize="23sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.641" />
+
+    <TextView
+        android:id="@+id/messageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="23sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/centerText" />
+
+    <!-- Reset Button -->
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="300sp"
+        android:layout_height="80sp"
+        android:textSize="23sp"
+        android:text="Clear Text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/messageText"
+        android:visibility="gone"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
